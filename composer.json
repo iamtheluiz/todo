@@ -1,0 +1,27 @@
+{
+    "name": "iamtheluiz/todo",
+    "description": "PHP Todo Project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luiz Gustavo da Silva Vasconcellos",
+            "email": "iamtheluiz.dev@gmail.com",
+            "role": "Developer",
+            "homepage": "https://iamtheluiz.github.io/"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+
+    }
+}
