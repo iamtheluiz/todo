@@ -1,26 +1,25 @@
 <?php
 
-require __DIR__."/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
-$router = new Router(URL_BASE);
+$router = new Router(ROOT);
 
 // Controllers
 $router->namespace("Source\Controllers");
 
 // Index
 $router->group(null);
-$router->get("/", function (){
-  echo "<h1>Index</h1>";
-});
+$router->get("/", "TodoController:home");
 
 // Errors
 $router->group("ooops");
-$router->get("/{errcode}", "Error:home");
+$router->get("/{errcode}", "ErrorController:home");
 
+// Process
 $router->dispatch();
 
-if($router->error()) {
-  $router->redirect("/ooops/{$router->error()}");
+if ($router->error()) {
+    $router->redirect("/ooops/{$router->error()}");
 }

@@ -23,6 +23,9 @@
     },
     "require": {
         "coffeecode/datalayer": "^1.1",
-        "coffeecode/router": "^1.0"
+        "coffeecode/router": "^1.0",
+        "php": "^7.4",
+        "ext-PDO": "^7.4",
+        "league/plates": "v4.0.0-alpha"
     }
 }

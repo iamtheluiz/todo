@@ -10,6 +10,9 @@ Options All -Indexes
 #RewriteCond %{HTTPS} off
 #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect 'source' path
+RewriteRule ^/?source/([a-z/.]+)$ /source/Views/$1 [R=301,L]
+
 # ROUTER URL Rewrite
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d

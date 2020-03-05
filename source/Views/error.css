@@ -1,0 +1,23 @@
+main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 40pt;
+  margin-bottom: 0px !important;
+}
+
+p {
+  max-width: 80%;
+  margin: 0 auto 30px;
+  font-size: 18px;
+}
+
+a {
+  color: white;
+  background-color: #8453ff;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
