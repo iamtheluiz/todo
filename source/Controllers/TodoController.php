@@ -60,7 +60,9 @@ class TodoController
     {
         $todo = new Todo();
         $todo->nm_todo = $data["nm_todo"];
-        $todo->ds_todo = $data["ds_todo"];
+        if ($data["ds_todo"]) {
+            $todo->ds_todo = $data["ds_todo"];
+        }
 
         $todo->save();
 
