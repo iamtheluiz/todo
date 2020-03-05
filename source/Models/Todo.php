@@ -16,6 +16,6 @@ class Todo extends DataLayer
      */
     public function __construct()
     {
-        parent::__construct("todo", ["nm_todo", "ds_todo", "st_todo"], "cd_todo");
+        parent::__construct("todo", ["nm_todo", "ds_todo"], "cd_todo");
     }
 }

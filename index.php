@@ -13,6 +13,14 @@ $router->namespace("Source\Controllers");
 $router->group(null);
 $router->get("/", "TodoController:home");
 
+// To do
+$router->group("todo");
+
+// New Task
+$router->group("new");
+$router->get("/", "TodoController:new");
+$router->post("/", "TodoController:store");
+
 // Errors
 $router->group("ooops");
 $router->get("/{errcode}", "ErrorController:home");

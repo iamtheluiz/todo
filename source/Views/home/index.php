@@ -24,9 +24,9 @@ $v->layout("_theme");
             <?php endforeach; ?>
         </ul>
     <?php else: ?>
-        <h1>Não existem tarefas cadastradas!</h1>
+        <h2>Não existem tarefas cadastradas!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ratione!</p>
     <?php endif; ?>
 </div>
 
-<a href="<?= url("new/"); ?>">Cadastrar</a>
+<a class="button" href="<?= url("new/"); ?>">Cadastrar</a>

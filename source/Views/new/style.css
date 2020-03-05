@@ -1,0 +1,24 @@
+form {
+  width: 100%;
+}
+
+form input, form textarea {
+  font-family: Roboto;
+  width: 100%;
+  padding: 12px;
+  font-size: 12pt;
+  border: 2px solid #8453ff;
+  border-radius: 5px;
+  color: #4b4b4b;
+  margin-bottom: 5px;
+}
+
+form button {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 12pt;
+}
+form a {
+  background-color: grey !important;
+  font-size: 12pt;
+}

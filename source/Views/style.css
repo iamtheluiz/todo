@@ -50,6 +50,9 @@ main h1 {
   margin: 15px 0px;
   text-align: center;
 }
+main h2, main p {
+  text-align: center;
+}
 
 main div.todos {
   flex: 1;
@@ -70,7 +73,7 @@ main header {
   color: #8453ff;
 }
 
-main a {
+.button {
   color: white;
   text-align: center;
   background-color: #8453ff;
