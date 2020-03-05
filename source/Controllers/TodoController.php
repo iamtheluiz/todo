@@ -4,6 +4,7 @@
 namespace Source\Controllers;
 
 
+use CoffeeCode\Router\Router;
 use League\Plates\Engine;
 use Source\Models\Todo;
 
@@ -17,13 +18,20 @@ class TodoController
      * @var Engine
      */
     private Engine $view;
+    /**
+     * @var Router
+     */
+    private Router $router;
 
     /**
      * TodoController constructor.
+     * @param Router $router
      */
-    public function __construct()
+    public function __construct(Router $router)
     {
+        $this->router = $router;
         $this->view = Engine::create(__DIR__ . "/../Views", "php");
+        $this->view->addData(["router" => $router]);
     }
 
     /**
@@ -39,5 +47,23 @@ class TodoController
             "todos" => $todos,
             "date" => $date
         ]);
+    }
+
+    public function new(): void
+    {
+        echo $this->view->render("new/index", [
+            "title" => "New | " . SITE
+        ]);
+    }
+
+    public function store($data): void
+    {
+        $todo = new Todo();
+        $todo->nm_todo = $data["nm_todo"];
+        $todo->ds_todo = $data["ds_todo"];
+
+        $todo->save();
+
+        $this->router->redirect("");
     }
 }

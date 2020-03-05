@@ -19,10 +19,12 @@ class ErrorController
 
     /**
      * ErrorController constructor.
+     * @param Router $router
      */
-    public function __construct()
+    public function __construct(Router $router)
     {
         $this->view = Engine::create(__DIR__ . "/../Views", "php");
+        $this->view->addData(["router" => $router]);
     }
 
     /**
