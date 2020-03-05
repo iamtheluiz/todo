@@ -34,7 +34,7 @@ class TodoController
         $date = (new \DateTime())->format('l, j F Y');
         $todos = (new Todo())->find()->fetch(true);
 
-        echo $this->view->render("home", [
+        echo $this->view->render("home/index", [
             "title" => "Home | " . SITE,
             "todos" => $todos,
             "date" => $date

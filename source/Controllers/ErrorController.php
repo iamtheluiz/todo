@@ -30,7 +30,7 @@ class ErrorController
      */
     public function home(array $data): void
     {
-        echo $this->view->render("error", [
+        echo $this->view->render("error/index", [
             "title" => "Error | " . SITE,
             "error" => $data["errcode"]
         ]);

@@ -1,11 +1,20 @@
-<?php $v->layout("_theme"); ?>
+<?php
 
-<header><?= $date; ?></header>
+/**
+ * @var $v
+ * @var \Source\Models\Todo $todos
+ * @var string $date
+ */
+$v->layout("_theme");
+?>
+
+<header><?= $date ?></header>
 
 <h1>To do List</h1>
 
 <div class="todos">
-    <?php if ($todos): ?>
+    <?php
+    if ($todos): ?>
         <ul>
             <?php foreach ($todos as $item): ?>
                 <li>
