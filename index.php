@@ -11,19 +11,19 @@ $router->namespace("Source\Controllers");
 
 // Index
 $router->group(null);
-$router->get("/", "TodoController:home");
+$router->get("/", "TodoController:home", "todo.home");
 
 // To do
 $router->group("todo");
 
 // New Task
 $router->group("new");
-$router->get("/", "TodoController:new");
-$router->post("/", "TodoController:store");
+$router->get("/", "TodoController:new", "todo.new");
+$router->post("/", "TodoController:store", "todo.store");
 
 // Errors
 $router->group("ooops");
-$router->get("/{errcode}", "ErrorController:home");
+$router->get("/{errcode}", "ErrorController:home", "error.home");
 
 // Process
 $router->dispatch();

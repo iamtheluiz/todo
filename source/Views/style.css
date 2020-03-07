@@ -80,6 +80,7 @@ main header {
   padding: 10px;
   text-decoration: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /*Checkboxes styles*/

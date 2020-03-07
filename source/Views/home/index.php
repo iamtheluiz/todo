@@ -29,4 +29,4 @@ $v->layout("_theme");
     <?php endif; ?>
 </div>
 
-<a class="button" href="<?= url("new/"); ?>">Cadastrar</a>
+<a class="button" href="<?= $router->route("todo.new"); ?>">Cadastrar</a>

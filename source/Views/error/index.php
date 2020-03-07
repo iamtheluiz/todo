@@ -13,4 +13,4 @@ $v->layout("_theme");
 
 <h1>Erro <?= $error ?></h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, ut!</p>
-<a class="button" href="<?= url(""); ?>">Voltar</a>
+<a class="button" href="<?= $router->route("todo.home"); ?>">Voltar</a>
