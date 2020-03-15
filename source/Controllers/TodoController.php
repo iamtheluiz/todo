@@ -49,6 +49,18 @@ class TodoController
         ]);
     }
 
+    public function done(): void
+    {
+        $date = (new \DateTime())->format('l, j F Y');
+        $todos = (new Todo())->find("st_todo = 1")->fetch(true);
+
+        echo $this->view->render("done/index", [
+            "title" => "Done | " . SITE,
+            "todos" => $todos,
+            "date" => $date
+        ]);
+    }
+
     public function new(): void
     {
         echo $this->view->render("new/index", [

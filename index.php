@@ -12,6 +12,7 @@ $router->namespace("Source\Controllers");
 // Index
 $router->group(null);
 $router->get("/", "TodoController:home", "todo.home");
+$router->get("/done", "TodoController:done", "todo.done");
 
 // To do
 $router->group("todo");

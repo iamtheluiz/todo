@@ -10,7 +10,7 @@ $v->layout("_theme");
 
     <header><?= $date ?></header>
 
-    <h1>To do List</h1>
+    <h1>Done</h1>
 
     <div class="todos">
         <?php
@@ -31,13 +31,12 @@ $v->layout("_theme");
                 <?php endforeach; ?>
             </ul>
         <?php else: ?>
-            <h2>Não existem tarefas cadastradas!</h2>
+            <h2>Não existem tarefas concluídas!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ratione!</p>
         <?php endif; ?>
     </div>
 
-    <a class="button" href="<?= $router->route("todo.new"); ?>">Cadastrar</a>
-    <a class="button grey" href="<?= $router->route("todo.done"); ?>">Concluídas</a>
+    <a class="button grey" href="<?= $router->route("todo.home"); ?>">Voltar</a>
 
 <?php $v->start("scripts"); ?>
     <script>
