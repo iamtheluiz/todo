@@ -18,15 +18,7 @@ $v->layout("_theme");
             <ul>
                 <?php foreach ($todos as $item): ?>
                     <li>
-                        <input
-                            type="checkbox"
-                            id="<?= $item->cd_todo; ?>"
-                            <?= $item->st_todo == 1 ? "checked" : ""; ?>
-                            data-id="<?= $item->cd_todo; ?>"
-                            data-action="<?= $router->route("todo.update"); ?>"
-                            data-status="<?= $item->st_todo; ?>"
-                        >
-                        <label for="<?= $item->cd_todo; ?>"><?= $item->nm_todo; ?></label>
+                        <?= $v->insert("components/task", ["item" => $item, "router" => $router]) ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -50,7 +42,7 @@ $v->layout("_theme");
                 $(this)[0].setAttribute('disabled', '');
 
                 // Update task status
-                $.ajax({url: data.action, method: 'PUT', data, encode: true})
+                $.ajax({url: data.action, method: data.method, data, encode: true})
                     .then(function (response) {
                         li.fadeOut(400);
                         setTimeout(() => {

@@ -18,6 +18,7 @@ $router->get("/done", "TodoController:done", "todo.done");
 $router->group("todo");
 $router->put("/update", "TodoController:update", "todo.update");
 $router->post("/store", "TodoController:store", "todo.store");
+$router->delete("/delete", "TodoController:delete", "todo.delete");
 
 // New Task
 $router->group("new");

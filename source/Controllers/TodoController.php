@@ -90,4 +90,11 @@ class TodoController
 
         echo json_encode($data);
     }
+
+    public function delete($data): void
+    {
+        $todo = (new Todo())->findById($data["id"])->destroy();
+
+        echo json_encode($todo);
+    }
 }
