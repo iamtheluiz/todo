@@ -15,11 +15,11 @@ $router->get("/", "TodoController:home", "todo.home");
 
 // To do
 $router->group("todo");
+$router->post("/store", "TodoController:store", "todo.store");
 
 // New Task
 $router->group("new");
 $router->get("/", "TodoController:new", "todo.new");
-$router->post("/", "TodoController:store", "todo.store");
 
 // Errors
 $router->group("ooops");

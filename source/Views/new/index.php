@@ -10,7 +10,7 @@ $v->layout("_theme");
 <link rel="stylesheet" href="<?= url("/source/new/style.css"); ?>">
 <?php $v->end(); ?>
 
-<form action="<?= $router->route("todo.new"); ?>" method="post">
+<form action="<?= $router->route("todo.store"); ?>" method="post">
     <h1>New To Do</h1>
     <input type="text" name="nm_todo" placeholder="Nome..." required>
     <textarea name="ds_todo" placeholder="Descrição..." rows="3"></textarea>
