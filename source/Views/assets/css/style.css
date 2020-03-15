@@ -83,6 +83,11 @@ main header {
   cursor: pointer;
 }
 
+.button.grey {
+  background-color: #6f6f6f;
+  margin-top: 2px;
+}
+
 /*Checkboxes styles*/
 input[type="checkbox"] {
   display: none;

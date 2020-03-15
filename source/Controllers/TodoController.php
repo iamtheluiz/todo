@@ -40,7 +40,7 @@ class TodoController
     public function home(): void
     {
         $date = (new \DateTime())->format('l, j F Y');
-        $todos = (new Todo())->find()->fetch(true);
+        $todos = (new Todo())->find("st_todo = 0")->fetch(true);
 
         echo $this->view->render("home/index", [
             "title" => "Home | " . SITE,
@@ -67,5 +67,15 @@ class TodoController
         $todo->save();
 
         $this->router->redirect("");
+    }
+
+    public function update($data): void
+    {
+        $todo = (new Todo())->findById($data["id"]);
+
+        $data["status"] == "0" ? $todo->st_todo = 1 : $todo->st_todo = 0;
+        $todo->save();
+
+        echo json_encode($data);
     }
 }

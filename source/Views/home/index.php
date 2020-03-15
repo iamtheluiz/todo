@@ -22,6 +22,7 @@ $v->layout("_theme");
                             type="checkbox"
                             id="<?= $item->cd_todo; ?>"
                             <?= $item->st_todo == 1 ? "checked" : ""; ?>
+                            data-id="<?= $item->cd_todo; ?>"
                             data-action="<?= $router->route("todo.update"); ?>"
                             data-status="<?= $item->st_todo; ?>"
                         >
@@ -36,15 +37,28 @@ $v->layout("_theme");
     </div>
 
     <a class="button" href="<?= $router->route("todo.new"); ?>">Cadastrar</a>
+    <a class="button grey" href="<?= $router->route("todo.new"); ?>">Concluídas</a>
 
 <?php $v->start("scripts"); ?>
     <script>
         $(function () {
             $("body").on("click", "[data-action]", function (event) {
-                let data = $(this).data();
+                let data = $(this).data();  // Task info
                 let li = $(this).parent();
 
+                // Disable input
+                $(this)[0].setAttribute('disabled', '');
 
+                // Update task status
+                $.ajax({url: data.action, method: 'PUT', data, encode: true})
+                    .then(function (response) {
+                        li.fadeOut(400);
+                        setTimeout(() => {
+                            li.remove();
+                        }, 400);
+
+                        console.log(response);
+                    });
             });
         })
     </script>

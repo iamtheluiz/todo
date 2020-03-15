@@ -15,6 +15,7 @@ $router->get("/", "TodoController:home", "todo.home");
 
 // To do
 $router->group("todo");
+$router->put("/update", "TodoController:update", "todo.update");
 $router->post("/store", "TodoController:store", "todo.store");
 
 // New Task
