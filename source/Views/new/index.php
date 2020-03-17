@@ -15,5 +15,5 @@ $v->layout("_theme");
     <input type="text" name="nm_todo" placeholder="Nome..." required>
     <textarea name="ds_todo" placeholder="Descrição..." rows="3"></textarea>
     <button type="submit" class="button">Enviar</button>
-    <a href="<?= $router->route("todo.home"); ?>" class="button">Voltar</a>
+    <a href="<?= $router->route("todo.home"); ?>" class="button grey">Voltar</a>
 </form>

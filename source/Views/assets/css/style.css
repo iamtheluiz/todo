@@ -32,6 +32,14 @@ body {
   background: linear-gradient(103deg, rgba(211, 108, 223, 1) 0%, rgba(169, 219, 255, 1) 100%);
 }
 
+a{
+  text-decoration: none;
+}
+
+.emoji {
+  font-family: apple color emoji, segoe ui emoji, notocoloremoji, segoe ui symbol, android emoji, emojisymbols, emojione mozilla;
+}
+
 ul {
   list-style: none;
 }
@@ -50,6 +58,7 @@ main h1 {
   margin: 15px 0px;
   text-align: center;
 }
+
 main h2, main p {
   text-align: center;
 }
@@ -64,6 +73,7 @@ main ul li {
   display: flex;
   flex-direction: row;
   font-size: 20px;
+  height: 44px;
   padding: 10px 0px;
 }
 

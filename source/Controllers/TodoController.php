@@ -61,6 +61,20 @@ class TodoController
         ]);
     }
 
+    public function details($data)
+    {
+        $todo = (new Todo())->findById($data["id"]);
+
+        if (!$todo) {
+            $this->router->redirect("todo.home");
+        }
+
+        echo $this->view->render("details/index", [
+            "title" => "Details | " . SITE,
+            "todo" => $todo,
+        ]);
+    }
+
     public function new(): void
     {
         echo $this->view->render("new/index", [
