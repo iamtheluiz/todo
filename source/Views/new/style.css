@@ -2,19 +2,44 @@ form {
   width: 100%;
 }
 
+div.ck p, div.ck h1, div.ck h2, div.ck h3 {
+  text-align: left !important;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+ul {
+  list-style: circle !important;
+}
+
+ul li {
+  padding: 0px !important;
+  height: 30px !important;
+}
+
+div.ck-editor__main {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
 form input, form textarea {
   font-family: Roboto;
   width: 100%;
   padding: 12px;
   font-size: 12pt;
-  border: 2px solid #8453ff;
-  border-radius: 5px;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
   color: #4b4b4b;
   margin-bottom: 5px;
+  resize: vertical;
+  text-align: left;
 }
 
 form button {
   width: 100%;
+  margin-top: 5px;
   margin-bottom: 15px;
   font-size: 12pt;
 }

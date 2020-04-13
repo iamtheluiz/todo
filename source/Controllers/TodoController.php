@@ -67,12 +67,18 @@ class TodoController
 
         if (!$todo) {
             $this->router->redirect("todo.home");
+            return;
         }
 
         echo $this->view->render("details/index", [
             "title" => "Details | " . SITE,
             "todo" => $todo,
         ]);
+    }
+
+    public function edit()
+    {
+
     }
 
     public function new(): void

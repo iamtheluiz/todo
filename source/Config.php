@@ -1,5 +1,10 @@
 <?php
 
+// Check if server is localhost
+if ($_SERVER['SERVER_ADDR']) {
+    $_SERVER['SERVER_ADDR'] = "localhost";
+}
+
 define("ROOT", "http://{$_SERVER['SERVER_ADDR']}:{$_SERVER['SERVER_PORT']}");
 
 define("SITE", "ToDo");

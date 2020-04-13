@@ -1,5 +1,8 @@
+p, h1, h2, h3 {
+  text-align: left !important;
+}
+
 main p {
-  text-align: left;
   margin-top: 5px !important;
 }
 

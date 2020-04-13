@@ -19,6 +19,7 @@ $router->group("todo");
 $router->put("/update", "TodoController:update", "todo.update");
 $router->post("/store", "TodoController:store", "todo.store");
 $router->delete("/delete", "TodoController:delete", "todo.delete");
+$router->get("/{id}/edit", "TodoController:edit", "todo.edit");
 $router->get("/{id}", "TodoController:details", "todo.details");
 
 // New Task

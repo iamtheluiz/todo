@@ -13,7 +13,7 @@ $v->layout("_theme");
     <header>
         <h2 style="color: #4b4b4b"><?= $todo->nm_todo; ?></h2>
         <div class="options">
-            <a href="<?= $router->route("/view"); ?>" class="emoji">✏</a>
+            <a href="<?= $router->route("todo.edit", ["id" => $todo->cd_todo]); ?>" class="emoji">✏</a>
             <a
                 href="#!"
                 class="emoji"
@@ -32,6 +32,7 @@ $v->layout("_theme");
 
 <?php $v->start("scripts"); ?>
     <script>
+        // Document ready
         $(function () {
             $("body").on("click", "[data-action]", function (event) {
                 let data = $(this).data();  // Task info

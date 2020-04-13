@@ -20,5 +20,5 @@
         🗑
     </a>
 <?php else: ?>
-    <a href="<?= $router->route("/view"); ?>" class="emoji">✏</a>
+    <a href="<?= $router->route("todo.edit", ["id" => $item->cd_todo]); ?>" class="emoji">✏</a>
 <?php endif; ?>
